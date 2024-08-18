@@ -1,4 +1,4 @@
-package com.mysite;
+package com.mysite.lesson22;
 
 import com.sun.net.httpserver.HttpServer;
 
