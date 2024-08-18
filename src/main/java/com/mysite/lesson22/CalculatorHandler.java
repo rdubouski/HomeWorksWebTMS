@@ -10,6 +10,8 @@ import java.util.Map;
 public class CalculatorHandler implements HttpHandler {
     @Override
     public void handle(HttpExchange exchange) throws IOException {
+
+        OperationHistory operationHistory =new OperationHistory();
         String query = exchange.getRequestURI().getQuery();
         Map<String, String> parameters = getParameters(query);
 
@@ -26,11 +28,10 @@ public class CalculatorHandler implements HttpHandler {
             default -> throw new IllegalStateException("Unexpected value: " + parameters.get("type"));
         };
 
+        operationHistory.writeHistory(response + "\n");
 
         exchange.sendResponseHeaders(200, response.length());
-
         exchange.getResponseBody().write(response.getBytes());
-
         exchange.getResponseBody().close();
     }
 
