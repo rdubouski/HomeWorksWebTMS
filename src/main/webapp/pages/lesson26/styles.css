@@ -1,0 +1,53 @@
+/*button {*/
+/*    background-color: aquamarine;*/
+/*    width: 25%;*/
+/*    border: solid 1px blue;*/
+/*    border-radius: 8px;*/
+/*}*/
+
+html {
+    padding: 100px;
+}
+
+.my-card {
+    width: 20%;
+    border: solid 2px black;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.my-card-info {
+    padding: 20px;
+}
+
+.my-card-button {
+    width: 100%;
+    height: 36px;
+    background-color: white;
+    border: solid 2px black;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.my-card-button:hover {
+    background-color: black;
+    color: white;
+    border: none;
+    transition: 0.3s;
+}
+
+.my-btn-fill {
+    background-color: black;
+    color: white;
+}
+
+.my-btn-outline {
+    background-color: white;
+    color: black;
+    border: solid 1px black;
+    border-radius: 4px;
+}
+
+#btn {
+    background-color: aqua;
+}
